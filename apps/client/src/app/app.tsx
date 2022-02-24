@@ -2,7 +2,9 @@
 import styles from './app.module.css';
 
 export function App() {
-  return <div>App Works with Tailwind!</div>;
+  return (
+    <div className="md:container md:mx-auto">App Works with Tailwind!</div>
+  );
 }
 
 export default App;
