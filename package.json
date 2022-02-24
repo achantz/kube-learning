@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "docker:build": "docker build -t react:dev  -f ./.docker/Dockerfile.dev .",
+    "docker:run": "docker run -d --name react -p 4200:4200 -v /app/node_modules -v ${PWD}:/app --rm react:dev"
   },
   "private": true,
   "dependencies": {
